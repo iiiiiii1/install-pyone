@@ -254,9 +254,9 @@ start(){
         systemctl start caddy
         systemctl enable caddy
         fi
-     wget -N --no-check-certificate https://www.moerats.com/usr/shell/PyOne/pyone.service -P '/etc/systemd/system/'
+        wget -N --no-check-certificate https://www.moerats.com/usr/shell/PyOne/pyone.service -P '/etc/systemd/system/'
     if [ "${release}" = "centos" ]; then
-     wget -N --no-check-certificate https://www.moerats.com/usr/shell/PyOne/redis-server.service -P '/etc/systemd/system/'
+        wget -N --no-check-certificate https://www.moerats.com/usr/shell/PyOne/redis-server.service -P '/etc/systemd/system/'
     fi
         EXEC="$(command -v gunicorn)"
         sed -i "s#gunicorn#${EXEC}#g" /etc/systemd/system/pyone.service
