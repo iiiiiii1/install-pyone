@@ -80,10 +80,6 @@ enter(){
 #install repo
 repo(){
     if [ "${release}" = "centos" ]; then
-        EXEC="$(command -v wget)"
-    if [[ -z ${EXEC} ]]; then
-        yum install wget -y
-    fi
         rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
         wget -N --no-check-certificate https://www.moerats.com/usr/shell/PyOne/mongodb.repo -P '/etc/yum.repos.d/'
     else
