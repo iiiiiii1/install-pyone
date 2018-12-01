@@ -303,9 +303,6 @@ case "$num" in
     2)
     use_domain
     ;;
-    3)
-    update_PyOne
-    ;;
     *)
     clear
     echo -e "${Blue}请输入正确数字 [1-2]${Font}"
